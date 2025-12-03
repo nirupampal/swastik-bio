@@ -1,0 +1,383 @@
+{
+  "site": {
+    "title": "Kisan Mitra Swastic Organic Pvt. Ltd.",
+    "tagline": "Save Soil — Save Farmers",
+    "shortDescription": "Manufacturer of specialised bio-fertilizers focused on soil health and sustainable agriculture.",
+    "longDescription": "Kisan Mitra Swastic Organic Pvt. Ltd. is an agricultural biotechnology company dedicated to research, development and production of high-quality bio-fertilizers. For over 14 years we have worked closely with farmers, agronomists and researchers to create products that restore soil health, improve crop yield and reduce dependency on chemical fertilizers.",
+    "foundingYear": "2011",
+    "headquarters": "Plot No. 365/1, Katalwahi, Post-Musra, Rajnandgaon (C.G.)",
+    "phone": "+91-7694909846",
+    "website": "www.swasticorganic.com",
+    "email": "info@swasticorganic.com",
+    "gst": "",
+    "social": {
+      "facebook": "",
+      "instagram": "",
+      "twitter": "",
+      "linkedin": ""
+    }
+  },
+  "meta": {
+    "title": "Swastic Organic — Biofertilizers & Soil Health Solutions",
+    "description": "Research-backed bio-fertilizers — BIO PROM, BIO CHAR, BIO POTASH, BIO NPK, Plant Booster. Enhance yields and restore soil health.",
+    "keywords": "biofertilizer, organic fertilizer, biochar, potash, phosphate manure, soil health, sustainable agriculture"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "services": "Services",
+    "research": "R&D",
+    "blog": "Blog",
+    "contact": "Contact",
+    "distributors": "Distributors",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Restoring Soil. Empowering Farmers.",
+    "subtitle": "Research-driven organic bio-fertilizers to increase yield & soil health.",
+    "ctaPrimary": "Explore Products",
+    "ctaSecondary": "Contact Sales"
+  },
+  "about": {
+    "headline": "About Us",
+    "intro": "At Kisan Mitra Swastic Organic Pvt. Ltd., we combine scientific research with practical farming experience to produce effective biological solutions for soil and plant nutrition.",
+    "vision": "A future where every farmer can grow abundant crops on healthy, living soils without depending on harmful chemical inputs.",
+    "mission": "To deliver affordable, science-backed biofertilizers and agronomic guidance that restore soil fertility, increase crop resilience, and improve farmer livelihoods.",
+    "values": [
+      "Farmer-first solutions",
+      "Science-driven innovation",
+      "Environmental stewardship",
+      "Quality and safety",
+      "Transparent support and training"
+    ],
+    "history": [
+      "2011 — Company founded to research biofertilizers.",
+      "2013 — First pilot products launched with local farmers.",
+      "2016 — Expanded R&D facility and field trials across three states.",
+      "2019 — Scaled manufacturing and certification for organic use.",
+      "2022 — Launched premium product range and nationwide distribution."
+    ],
+    "team": [
+      {
+        "name": "Dr. Jeevan Janghel",
+        "role": "Head of R&D",
+        "bio": "Soil microbiologist with 18 years of experience in biofertilizer development and field extension."
+      },
+      {
+        "name": "Mr. Aneshwar Verma",
+        "role": "Head of Farmer Outreach",
+        "bio": "Agricultural extension specialist who leads farmer training and field trials."
+      }
+    ]
+  },
+  "contact": {
+    "phone": "+91-7694909846",
+    "website": "www.swasticorganic.com",
+    "address": "Plot No. 365/1, Katalwahi, Post-Musra, Rajnandgaon (C.G)",
+    "emails": {
+      "info": "info@swasticorganic.com",
+      "sales": "sales@swasticorganic.com",
+      "support": "support@swasticorganic.com"
+    },
+    "openingHours": {
+      "mondayToFriday": "9:00 AM - 6:00 PM",
+      "saturday": "9:00 AM - 2:00 PM",
+      "sunday": "Closed"
+    },
+    "mapNote": "Visit our head office for product demos and soil testing appointments."
+  },
+  "products": {
+    "intro": "Our product range is developed after extensive R&D and field validation. Choose the product suited to your soil and crop needs.",
+    "list": [
+      {
+        "id": "bio_prom",
+        "title": "BIO PROM",
+        "subtitle": "Phosphate Rich Organic Manure (PROM)",
+        "image": "/images/products/bio_prom.png",
+        "description": "BIO PROM is a concentrated, phosphate-rich organic manure that contains 10.5% available phosphate alongside organic carbon, beneficial microbes and micronutrients. It is formulated from rock phosphate, organic matter and bio-particles to slowly release phosphorus and improve long-term soil fertility.",
+        "composition": {
+          "phosphate": "10.5% (P2O5 equivalent as available phosphorus)",
+          "nitrogen": "0.8% (approx.)",
+          "organicCarbon": "18-25% (varies by batch)",
+          "micronutrients": ["zinc", "cobalt", "copper", "iron (trace)"]
+        },
+        "benefits": [
+          "Slow and sustained phosphorus availability",
+          "Improves soil structure and porosity",
+          "Increases soil organic carbon and microbial activity",
+          "Enhances root development and nutrient uptake",
+          "Reduces soil erosion by improving aggregation",
+          "Acts as a buffering agent against extreme pH"
+        ],
+        "usage": {
+          "general": "Apply 50–100 kg per acre as a basal application depending on soil test & crop.",
+          "method": [
+            "Broadcast and incorporate into the top 10–15 cm of soil before sowing.",
+            "Mix with well-decomposed FYM or compost for better distribution.",
+            "Can be used in planting pits for orchards and plantation crops."
+          ],
+          "timing": "Apply at land preparation or at transplanting. For perennials, apply twice a year."
+        },
+        "cropRecommendations": {
+          "cereals": "50–75 kg/acre at land preparation",
+          "vegetables": "50–100 kg/acre mixed in nursery bed/field",
+          "orchards": "2–5 kg per pit for saplings depending on pit size"
+        },
+        "storage": "Store in a cool, dry place away from direct sunlight. Keep bags sealed to retain moisture and biological activity.",
+        "safety": "Non-toxic and safe for humans, animals and the environment. Use gloves when handling if you have sensitive skin.",
+        "packSizes": ["5 kg", "25 kg", "50 kg"],
+        "certifications": ["Organic input (pending/varies by batch)"]
+      },
+      {
+        "id": "bio_char",
+        "title": "BIO CHAR",
+        "subtitle": "Biochar — Carbon-rich Soil Amendment",
+        "image": "/images/products/bio_char.png",
+        "description": "Biochar is a stable, carbon-rich product produced by pyrolysis of biomass. When added to soil, biochar improves water holding capacity, nutrient retention, microbial habitat, and contributes to long-term carbon sequestration.",
+        "composition": {
+          "carbonContent": "60-85% (varies by feedstock and pyrolysis conditions)",
+          "ash": "5-20%",
+          "pH": "6.5-9.5 (depends on feedstock)"
+        },
+        "benefits": [
+          "Improves soil water retention and aeration",
+          "Increases nutrient density and reduces leaching",
+          "Provides habitat for beneficial soil microbes",
+          "Assists in carbon sequestration and climate mitigation",
+          "Helps stabilize soil temperature and seed germination"
+        ],
+        "usage": {
+          "general": "Apply biochar at 0.5–5 tonnes per hectare depending on soil type and crop.",
+          "method": [
+            "Mix biochar with compost or FYM before application to charge the biochar with nutrients.",
+            "Incorporate into the topsoil layer for annual crops.",
+            "Use with planting pits or potting mixes for tree saplings and horticulture."
+          ],
+          "timing": "Apply during land preparation or at the start of the cropping cycle."
+        },
+        "cropRecommendations": {
+          "sandySoils": "Use at higher rates (2–5 t/ha) to improve water retention",
+          "claySoils": "Lower rates (0.5–1.5 t/ha) can help improve structure",
+          "horticulture": "Mix 10–20% biochar into the potting mix"
+        },
+        "storage": "Keep dry and free from contamination. Seal bags to avoid dust."
+      },
+      {
+        "id": "bio_potash",
+        "title": "BIO POTASH",
+        "subtitle": "Potash Solubilizing Biofertilizer",
+        "image": "/images/products/bio_potash.png",
+        "description": "BIO POTASH contains potash-solubilizing microbes and organic carriers that mobilize fixed potassium in the soil, making it available to plant roots. It promotes root growth, drought resistance and starch accumulation in grains.",
+        "composition": {
+          "microbialStrains": ["Potash-solubilizing bacteria (PSB) spp."],
+          "organicCarrier": "Humified organic matter"
+        },
+        "benefits": [
+          "Mobilizes non-exchangeable potassium in the soil",
+          "Improves plant turgor and drought resistance",
+          "Enhances root growth and carbohydrate translocation",
+          "Increases starch content in grains and overall crop quality",
+          "Boosts beneficial soil microbial activity"
+        ],
+        "usage": {
+          "general": "Apply 50–100 kg per acre depending on soil test and crop.",
+          "method": [
+            "Broadcast and incorporate during land preparation.",
+            "Apply in-furrow for row crops or mix into nursery beds."
+          ],
+          "timing": "Baseline application at land preparation; can supplement during active growth stages if needed."
+        },
+        "cropRecommendations": {
+          "maize": "75–100 kg/acre at sowing",
+          "wheat": "50–75 kg/acre at sowing",
+          "vegetables": "50–100 kg/acre depending on crop"
+        },
+        "safety": "Safe to handle. Use protective gloves if performing large volume handling.",
+        "packSizes": ["5 kg", "25 kg"]
+      },
+      {
+        "id": "bio_npk",
+        "title": "BIO NPK",
+        "subtitle": "Premium Bio NPK — Microbial NPK Enhancer",
+        "image": "/images/products/bio_npk.png",
+        "description": "Premium Bio NPK is a microbial liquid/soluble formulation that increases nitrogen fixation, solubilizes unavailable phosphates and mobilizes fixed potassium. It improves nutrient uptake efficiency and reduces the dependence on chemical NPK fertilizers.",
+        "composition": {
+          "form": "Liquid (concentrate)",
+          "microbialConsortium": ["Nitrogen-fixing bacteria", "Phosphate-solubilizing bacteria", "Potash-mobilizing microbes"],
+          "nutrientContent": "Microbial enhancer — not a direct NPK replacement but reduces NPK dosages when used correctly."
+        },
+        "benefits": [
+          "Enhances atmospheric nitrogen utilization",
+          "Solubilizes unavailable forms of phosphorus",
+          "Mobilizes fixed and residual potassium",
+          "Increases drought tolerance and plant vigor",
+          "Can improve yield and quality by 20–30% under correct use"
+        ],
+        "applicationMethods": {
+          "soilApplication": "Mix 500 ml - 1.0 L Premium Bio NPK per acre in 50 kg of well-decomposed FYM/compost and spread during land preparation.",
+          "foliarSpray": "Mix 500 ml - 750 ml in 150 L water and spray at 30 days after sowing/planting; repeat 2–3 times at monthly intervals for best results.",
+          "dripIrrigation": "Mix 500 ml - 1.0 L per acre in 100 L water and apply through drip."
+        },
+        "safety": "Non-toxic. Avoid ingestion. Keep away from eyes.",
+        "packSizes": ["250 ml", "500 ml", "1 L", "5 L"]
+      },
+      {
+        "id": "plant_booster",
+        "title": "PLANT BOOSTER",
+        "subtitle": "Multi-purpose liquid plant booster",
+        "image": "/images/products/plant_booster.png",
+        "description": "Plant Booster is a liquid formulation designed to promote root and vegetative growth, partially suppress certain soil pests and nematodes, and enhance beneficial microbial populations. It reduces the need for chemical nematicides and promotes healthier seedlings.",
+        "benefits": [
+          "Promotes strong root development and early vigor",
+          "Reduces incidence of some soil-borne pests",
+          "Works synergistically with biofertilizers to boost nutrient uptake",
+          "Suitable for foliar application and soil drench"
+        ],
+        "usage": {
+          "general": "Use 5–10 ml in 1 L water depending on crop and stage.",
+          "timing": "Apply during early vegetative stages. If it rains within 12 hours, repeat the spray for optimal results."
+        },
+        "packSizes": ["100 ml", "250 ml", "500 ml"]
+      }
+    ]
+  },
+  "research": {
+    "headline": "R&D and Field Trials",
+    "overview": "Our R&D focuses on isolating beneficial microbes, optimizing carrier materials, and validating product performance under different agro-climatic zones. We conduct multi-season field trials to ensure consistent results.",
+    "activities": [
+      "Microbial strain isolation and characterization",
+      "Pilot greenhouse trials",
+      "Multi-location farmer field trials",
+      "Soil health monitoring and post-harvest analysis",
+      "Product formulation and shelf-life studies"
+    ],
+    "publications": [],
+    "trialSummaries": [
+      {
+        "id": "trial-2022-maize",
+        "title": "Maize yield improvement trial — 2022",
+        "summary": "Using BIO NPK combined with reduced chemical NPK showed an average yield increase of 18% across trial sites with improved grain quality and reduced nitrogen application by 25%."
+      },
+      {
+        "id": "trial-2021-pomegranate",
+        "title": "Orchard soil restoration — 2021",
+        "summary": "Integration of BIO PROM and BIO CHAR improved soil organic carbon by 12% and water holding capacity by 20% over two seasons."
+      }
+    ],
+    "contact": "For trial collaboration and detailed reports, contact research@swasticorganic.com"
+  },
+  "faq": {
+    "general": [
+      {
+        "q": "Are these products safe for organic farming?",
+        "a": "Our products are formulated using organic inputs and beneficial microbes. Certification for organic input varies by batch and region — contact us for current certification status for a particular product lot."
+      },
+      {
+        "q": "How do I choose the right product for my crop?",
+        "a": "Start with a soil test to understand nutrient deficiencies. For phosphorus-poor soils use BIO PROM, for poor structure add BIO CHAR, for potassium mobility issues use BIO POTASH, and for overall nutrient efficiency try BIO NPK. Our sales team can recommend a package based on soil report."
+      },
+      {
+        "q": "Can these products replace chemical fertilizers entirely?",
+        "a": "Biofertilizers improve nutrient use efficiency and can significantly reduce chemical fertilizer requirements over time. Replacement depends on soil status and crop; in many cases a combination with reduced chemical inputs gives the best results initially."
+      },
+      {
+        "q": "How long until I see results?",
+        "a": "Some benefits, such as improved microbial activity and soil moisture retention, can be observed within weeks. Yield improvements typically appear within one cropping season but may be more pronounced over multiple seasons as soil improves."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Ramesh Kumar",
+      "village": "Mandar",
+      "crop": "Maize",
+      "text": "Using BIO NPK with reduced chemical fertilizer increased my yield and reduced costs. The plants were healthier and required less irrigation."
+    },
+    {
+      "name": "Sunita Devi",
+      "village": "Musra",
+      "crop": "Vegetables",
+      "text": "BIO PROM improved the soil in my vegetable beds and the harvest quality improved visibly. Seedlings were stronger."
+    }
+  ],
+  "technical": {
+    "storage": {
+      "temperature": "Store between 10–35°C (50–95°F).",
+      "humidity": "Keep in a dry place to prevent microbial overgrowth or spoilage.",
+      "shelfLife": "Check product label. Typical shelf life is 12–24 months depending on formulation and storage conditions."
+    },
+    "safety": [
+      "Non-toxic to humans and animals when used as directed",
+      "Avoid ingestion; wash hands after handling",
+      "In case of eye contact, rinse with clean water and seek medical advice if irritation persists"
+    ],
+    "packaging": "Durable multi-layer bags for powders and HDPE containers for liquids with tamper-evident seals."
+  },
+  "distributors": {
+    "headline": "Regional Distributors & Contact Persons",
+    "list": [
+      {
+        "region": "Chhattisgarh",
+        "contact": "Jeevan Janghel",
+        "phone": "9098979864",
+        "notes": "Primary field contact and technical lead."
+      },
+      {
+        "region": "Madhya Pradesh",
+        "contact": "Aneshwar Verma",
+        "phone": "9179511409",
+        "notes": "Farmer outreach and training."
+      }
+    ],
+    "becomeDistributor": "To apply to become an authorized distributor, email sales@swasticorganic.com with business details and proposed territory."
+  },
+  "marketing": {
+    "brochureShort": "Research-backed biofertilizers to increase yield while regenerating soil health.",
+    "brochureLong": "Kisan Mitra Swastic Organic provides practical, farmer-friendly biofertilizers designed through years of R&D and field validation. Our solutions reduce input costs, increase resilience to drought, and improve crop quality while restoring soil health for future generations.",
+    "taglines": [
+      "Nature-powered fertility",
+      "Science for the soil",
+      "Grow more with living soil"
+    ]
+  },
+  "legal": {
+    "disclaimer": "Information provided is for guidance. Field conditions, soil types and farming practices vary, so results may differ. We recommend a soil test and trial before full-scale adoption.",
+    "warranty": "Products are warranted for manufacturing defects only. No guarantee is provided for crop yield which is affected by multiple factors beyond our control."
+  },
+  "resources": {
+    "soilTestGuide": {
+      "title": "How to collect a proper soil sample",
+      "steps": [
+        "Collect soil from 10-15 spots across the field",
+        "Take samples from the top 0-15 cm layer for most crops",
+        "Mix well and take composite sample of 500 g",
+        "Send to lab in clean, labeled bag and record GPS or field ID"
+      ],
+      "note": "Accurate testing ensures correct product recommendations."
+    },
+    "applicationVideos": [
+      {
+        "title": "How to apply BIO PROM in paddy fields",
+        "url": ""
+      }
+    ],
+    "glossary": {
+      "biochar": "Stable carbon product obtained by pyrolysis, used to improve soil properties.",
+      "potash": "Common term for potassium-based fertilizers."
+    }
+  },
+  "siteMap": {
+    "home": "/",
+    "products": "/products",
+    "about": "/about",
+    "contact": "/contact",
+    "blog": "/blog",
+    "privacyPolicy": "/privacy",
+    "terms": "/terms"
+  },
+  "copy": {
+    "productPageIntro": "Detailed product information, benefits, application methods, safety and storage instructions are provided on each product page. Contact our technical team for soil-specific recommendations.",
+    "learnMore": "Learn more about soil health and sustainable farming practices."
+  }
+}
