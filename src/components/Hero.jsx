@@ -42,7 +42,7 @@ export default function Hero() {
   const ctaSecondary = t("hero.ctaSecondary") || "Contact Sales";
 
   return (
-    <section id="home" className="relative bg-slate-50 overflow-hidden pt-10 pb-20 lg:pt-20 lg:pb-32">
+    <section id="home" className="relative bg-slate-50 overflow-hidden pt-20 pb-20 lg:pt-20 lg:pb-32">
       
       {/* --- Background Elements --- */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
