@@ -40,19 +40,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         
         {/* --- Logo Section --- */}
-        <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-            <Sprout size={22} fill="currentColor" className="text-emerald-100" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-bold text-slate-900 font-poppins leading-none tracking-tight">
-              {t("site.title").split(" ")[0]} <span className="text-emerald-600">Organic</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-widest text-slate-500 font-medium mt-1 hidden sm:block">
-              Bio-Tech Agriculture
-            </span>
-          </div>
-        </a>
+  <a href="#home" className="flex items-center gap-3 group">
+  <img 
+    src="/logo.png" 
+    alt="Logo" 
+    className="w-12 h-12 rounded-full object-cover group-hover:scale-105 transition-transform shadow-sm"
+  />
+</a>
+
+
 
         {/* --- Desktop Navigation --- */}
         <nav className="hidden md:flex items-center gap-8">

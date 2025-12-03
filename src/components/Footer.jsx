@@ -40,27 +40,29 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           {/* Column 1: Brand Info */}
-          <div className="space-y-6">
-            <div>
-              <div className="flex items-center gap-2 text-white text-xl font-bold font-poppins tracking-tight">
-                <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-emerald-100">
-                  <Sprout size={18} />
-                </div>
-                {title.split(" ")[0]} <span className="text-emerald-500">Organic</span>
-              </div>
-              <p className="mt-3 text-sm text-emerald-100/70 leading-relaxed">
-                {tagline}. Dedicated to research, development, and production of high-quality bio-fertilizers for over a decade.
-              </p>
-            </div>
-            
-            {/* Social Icons */}
-            <div className="flex items-center gap-4">
-              <SocialLink href={social.facebook} icon={<Facebook size={18} />} />
-              <SocialLink href={social.twitter} icon={<Twitter size={18} />} />
-              <SocialLink href={social.linkedin} icon={<Linkedin size={18} />} />
-              <SocialLink href={social.instagram} icon={<Instagram size={18} />} />
-            </div>
-          </div>
+      <div className="space-y-6">
+  <div>
+    <a href="#home" className="flex items-center gap-3 group">
+      <img
+        src="/logo.png"
+        alt="Logo"
+        className="w-12 h-12 rounded-full object-cover group-hover:scale-105 transition-transform shadow-sm"
+      />
+    </a>
+
+    <p className="mt-3 text-sm text-emerald-100/70 leading-relaxed">
+      {tagline}. Dedicated to research, development, and production of high-quality bio-fertilizers for over a decade.
+    </p>
+  </div>
+
+  {/* Social Icons */}
+  <div className="flex items-center gap-4">
+    <SocialLink href={social.facebook} icon={<Facebook size={18} />} />
+    <SocialLink href={social.twitter} icon={<Twitter size={18} />} />
+    <SocialLink href={social.linkedin} icon={<Linkedin size={18} />} />
+    <SocialLink href={social.instagram} icon={<Instagram size={18} />} />
+  </div>
+</div>
 
           {/* Column 2: Quick Links */}
           <div>
