@@ -36,7 +36,7 @@ export default function ImpactSection() {
           }}
         />
         {/* Darker Overlay for high contrast */}
-        <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-[1px]"></div>
+        <div className="absolute inset-0 bg-slate-900/60 "></div>
       </motion.div>
 
       {/* 2. CONTENT */}

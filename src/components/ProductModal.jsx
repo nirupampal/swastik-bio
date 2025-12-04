@@ -9,15 +9,11 @@ import {
   ShieldCheck, 
   Calendar, 
   Droplets,
-  Thermometer,
-  Info
+  Thermometer
 } from "lucide-react";
 import CompositionTable from "./CompositionTable";
 
-// (Include the CompositionTable from above here if in same file, or import it)
-
 export default function ProductModal({ product, isOpen, onClose }) {
-  // Prevent body scroll when modal is open (handled in parent, but good safety check)
   if (!isOpen) return null;
 
   // Normalizing Data
@@ -27,8 +23,6 @@ export default function ProductModal({ product, isOpen, onClose }) {
     usage, cropRecommendations, 
     storage, safety, packSizes = [] 
   } = product || {};
-
-  const isUsageObject = typeof usage === 'object' && usage !== null;
 
   // Animation Variants
   const overlayVariants = {
@@ -59,7 +53,7 @@ export default function ProductModal({ product, isOpen, onClose }) {
             animate="visible"
             exit="exit"
             onClick={onClose}
-            className="fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[60]"
+            className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[60]"
           />
 
           {/* --- Modal Wrapper --- */}
@@ -75,17 +69,19 @@ export default function ProductModal({ product, isOpen, onClose }) {
               {/* === HEADER SECTION === */}
               <div className="relative shrink-0 flex flex-col md:flex-row border-b border-slate-100 bg-gradient-to-br from-white via-slate-50 to-emerald-50/30">
                 
-                {/* Close Button (Floating) */}
+                {/* Close Button (UPDATED: Dark Emerald Hover) */}
                 <button 
                   onClick={onClose}
-                  className="absolute top-4 right-4 z-20 group p-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full shadow-sm hover:shadow-md hover:bg-red-50 hover:border-red-100 hover:text-red-500 transition-all duration-300"
+                  className="absolute top-4 right-4 z-20 group p-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full shadow-sm 
+                  hover:bg-emerald-950 hover:border-emerald-900 hover:text-emerald-400 
+                  transition-all duration-300"
                 >
                   <X size={20} className="group-hover:rotate-90 transition-transform duration-300" />
                 </button>
 
                 {/* Left: Product Image */}
                 <div className="w-full md:w-2/5 h-64 md:h-auto relative flex items-center justify-center p-8 overflow-hidden group">
-                  {/* Decorative blobs behind image */}
+                  {/* Decorative blobs */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-emerald-200/20 rounded-full blur-3xl group-hover:bg-emerald-300/30 transition-colors duration-500" />
                   
                   {image ? (
@@ -170,7 +166,7 @@ export default function ProductModal({ product, isOpen, onClose }) {
                               initial={{ opacity: 0, y: 5 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ delay: 0.1 * i }}
-                              className="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100"
+                              className="flex items-start gap-3 bg-slate-50 p-3 rounded-xl border border-slate-100 hover:border-emerald-200 transition-colors"
                             >
                               <div className="mt-1 w-4 h-4 rounded-full bg-emerald-500 flex items-center justify-center shrink-0">
                                 <span className="text-white text-[10px] font-bold">✓</span>
@@ -196,12 +192,11 @@ export default function ProductModal({ product, isOpen, onClose }) {
                     )}
                   </div>
 
-                  {/* 2. Usage Section (Wide Card) */}
+                  {/* 2. Usage Section */}
                   {usage && (
                     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-900 to-teal-900 text-white shadow-lg">
-                      {/* Background Pattern */}
                       <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
-                         <Droplets size={200} />
+                          <Droplets size={200} />
                       </div>
 
                       <div className="relative z-10 p-6 md:p-8">
@@ -212,25 +207,25 @@ export default function ProductModal({ product, isOpen, onClose }) {
                         <div className="grid md:grid-cols-2 gap-8">
                            {/* Left: General/Method */}
                            <div className="space-y-6">
-                              {usage.general && (
-                                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                                  <p className="text-emerald-50 italic">"{usage.general}"</p>
-                                </div>
-                              )}
-                              {usage.method && (
-                                <div>
-                                   <div className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">Recommended Method</div>
-                                   <ul className="space-y-2">
-                                    {Array.isArray(usage.method) ? usage.method.map((m, i) => (
-                                      <li key={i} className="flex gap-2 text-sm text-emerald-50">
-                                        <span className="text-emerald-400">•</span> {m}
-                                      </li>
-                                    )) : (
-                                      <li className="text-sm text-emerald-50">{usage.method}</li>
-                                    )}
-                                   </ul>
-                                </div>
-                              )}
+                             {usage.general && (
+                               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                                 <p className="text-emerald-50 italic">"{usage.general}"</p>
+                               </div>
+                             )}
+                             {usage.method && (
+                               <div>
+                                  <div className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">Recommended Method</div>
+                                  <ul className="space-y-2">
+                                   {Array.isArray(usage.method) ? usage.method.map((m, i) => (
+                                     <li key={i} className="flex gap-2 text-sm text-emerald-50">
+                                       <span className="text-emerald-400">•</span> {m}
+                                     </li>
+                                   )) : (
+                                     <li className="text-sm text-emerald-50">{usage.method}</li>
+                                   )}
+                                  </ul>
+                               </div>
+                             )}
                            </div>
 
                            {/* Right: Timing */}
@@ -259,8 +254,11 @@ export default function ProductModal({ product, isOpen, onClose }) {
                       </h4>
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                         {Object.entries(cropRecommendations).map(([key, val]) => (
-                          <div key={key} className="group p-4 rounded-xl bg-white border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all duration-300">
-                            <h5 className="text-[10px] font-bold uppercase text-slate-400 group-hover:text-emerald-600 mb-1 transition-colors">
+                          <div key={key} className="group p-4 rounded-xl bg-white border border-slate-200 
+                            hover:border-emerald-800 hover:shadow-[0_8px_30px_rgb(6,78,59,0.12)] 
+                            transition-all duration-300 cursor-default"
+                          >
+                            <h5 className="text-[10px] font-bold uppercase text-slate-400 group-hover:text-emerald-800 mb-1 transition-colors">
                               {key.replace(/([A-Z])/g, " $1")}
                             </h5>
                             <p className="text-sm font-bold text-slate-800 line-clamp-2">{val}</p>

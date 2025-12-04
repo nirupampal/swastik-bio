@@ -94,7 +94,7 @@ export default function About() {
   ];
 
   return (
-    <div className="bg-white font-sans text-slate-800 overflow-x-hidden">
+    <div id="about" className="bg-white font-sans text-slate-800 overflow-x-hidden">
       
       {/* --- Section 1: Hero & 3D Model --- */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-b from-emerald-50 to-white">
@@ -338,7 +338,7 @@ export default function About() {
 </section>
 
 {/* --- Section 5: Team --- */}
-<section className="py-24 bg-gradient-to-br from-emerald-700 via-emerald-800 to-emerald-900 border-t border-slate-100">
+<section className="py-24 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 border-t border-slate-100">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     <div className="text-center mb-16">
       <h2 className="text-6xl tracking-widest font-bold text-white">Meet the Experts</h2>
@@ -347,14 +347,14 @@ export default function About() {
 
     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       {teamData.map((member, idx) => (
-        <motion.div 
-          key={idx}
-          whileHover={{ y: -10 }}
-          className="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 
-                     text-center hover:border-white 
-                     hover:shadow-[0_20px_40px_-10px_rgba(16,185,129,0.2)] 
-                     transition-all duration-300 group"
-        >
+       <motion.div 
+  key={idx}
+  whileHover={{ y: -10 }}
+  className="bg-white p-8 rounded-2xl shadow-xl shadow-emerald-900/40 border border-slate-800 
+             text-center hover:border-emerald-600 
+             hover:shadow-[0_20px_40px_-10px_rgba(4,120,87,0.5)] 
+             transition-all duration-300 group"
+>
           <div className="w-24 h-24 mx-auto rounded-full 
                           bg-gradient-to-br from-emerald-100 to-teal-100 
                           text-emerald-700 flex items-center justify-center 
