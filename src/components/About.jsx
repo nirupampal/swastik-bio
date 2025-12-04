@@ -222,7 +222,7 @@ export default function About() {
               <motion.div 
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="group p-8 rounded-3xl bg-emerald-50/50 border border-emerald-100 relative overflow-hidden hover:bg-gradient-to-br hover:from-cyan-700 hover:to-blue-900 hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-2xl hover:shadow-emerald-200/50"
+                className="group p-8 rounded-3xl bg-emerald-50/50 border border-emerald-100 relative overflow-hidden hover:bg-gradient-to-br hover:from-emerald-700 hover:to-emerald-900 hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-2xl hover:shadow-emerald-200/50"
               >
                  {/* Icon Container */}
                  <div className="w-12 h-12 bg-emerald-200 text-emerald-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white group-hover:text-emerald-700 transition-colors duration-300 shadow-sm">
