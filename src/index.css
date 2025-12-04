@@ -23,3 +23,6 @@
 .hero-card {
   @apply bg-white/95 backdrop-blur-sm rounded-2xl border border-green-50 shadow-xl p-5;
 }
+.custom-scrollbar {
+  -webkit-overflow-scrolling: touch;
+}

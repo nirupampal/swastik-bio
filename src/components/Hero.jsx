@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   PlayCircle 
 } from "lucide-react";
+import Parallax from "./Parallax";
 
 // Animation Variants
 const containerVariants = {
@@ -32,6 +33,19 @@ const itemVariants = {
   }
 };
 
+// New variant for the light leak animation
+const lightLeakAnim = {
+  animate: {
+    opacity: [0.4, 0.6, 0.4],
+    scale: [1, 1.05, 1],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+};
+
 export default function Hero() {
   const { t } = useLocale();
 
@@ -46,13 +60,35 @@ export default function Hero() {
       
       {/* --- Background Elements --- */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
+        {/* Sunlight Light Leaks - New addition */}
+        <Parallax depth={0.05} className="absolute top-0 left-0 w-full h-full z-0 mix-blend-screen pointer-events-none">
+          <motion.div
+            variants={lightLeakAnim}
+            animate="animate"
+            className="absolute -top-[30%] -left-[10%] w-[80%] h-[80%] bg-gradient-radial from-orange-100/40 via-amber-100/10 to-transparent blur-[120px] rotate-12 opacity-50"
+          />
+          <motion.div
+            variants={lightLeakAnim}
+            animate="animate"
+            transition={{ delay: 4 }}
+            className="absolute top-[10%] left-[5%] w-[60%] h-[60%] bg-gradient-radial from-yellow-100/30 via-orange-50/5 to-transparent blur-[100px] -rotate-12 opacity-40"
+          />
+        </Parallax>
+
         {/* Organic Gradient Blob (Top Right) */}
-        <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-gradient-to-br from-emerald-100/40 to-teal-50/0 rounded-full blur-3xl opacity-60" />
+        <Parallax depth={0.12} className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-br from-emerald-100/40 to-teal-50/0 rounded-full blur-3xl opacity-60" />
+        </Parallax>
+
         {/* Organic Gradient Blob (Bottom Left) */}
-        <div className="absolute -bottom-[10%] -left-[10%] w-[600px] h-[600px] bg-gradient-to-tr from-blue-50/40 to-emerald-50/0 rounded-full blur-3xl opacity-60" />
+        <Parallax depth={0.06} className="absolute -bottom-[10%] -left-[10%] w-[600px] h-[600px] pointer-events-none">
+          <div className="w-full h-full bg-gradient-to-tr from-blue-50/40 to-emerald-50/0 rounded-full blur-3xl opacity-60" />
+        </Parallax>
         
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        {/* Grid Pattern Overlay (slight parallax) */}
+        <Parallax depth={0.03} className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        </Parallax>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
@@ -136,11 +172,13 @@ export default function Hero() {
           {/* --- RIGHT: Visuals --- */}
           <motion.div variants={itemVariants} className="relative z-10 lg:h-auto flex items-center justify-center">
             
-            {/* Decorative background blob behind image */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-emerald-200 to-teal-100 rounded-full blur-[60px] opacity-40 transform scale-90" />
+            {/* Decorative background blob behind image (light parallax) */}
+            <Parallax depth={0.06} className="absolute inset-0 pointer-events-none">
+              <div className="absolute inset-0 bg-gradient-to-tr from-emerald-200 to-teal-100 rounded-full blur-[60px] opacity-40 transform scale-90" />
+            </Parallax>
 
-            {/* Main Image Container */}
-            <div className="relative w-full max-w-lg aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
+            {/* Main Image Container (parent parallax) */}
+            <Parallax depth={0.08} className="relative w-full max-w-lg aspect-[4/5] md:aspect-square lg:aspect-[4/5]">
               {/* Image */}
               <img 
                 src="/soil.png" 
@@ -148,45 +186,49 @@ export default function Hero() {
                 className="w-full h-full object-cover rounded-3xl shadow-2xl ring-1 ring-slate-900/5"
               />
 
-              {/* Floating Glassmorphism Card 1: Results */}
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                className="absolute top-10 -right-6 md:-right-12 bg-white/90 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl max-w-[200px]"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
-                    <Sprout size={20} fill="currentColor" className="opacity-20" />
-                    <Sprout size={20} className="absolute" />
+              {/* Floating Glassmorphism Card 1: Results (stronger parallax for pop) */}
+              <Parallax depth={0.16} className="absolute top-10 -right-6 md:-right-12">
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                  className="bg-white/90 backdrop-blur-md border border-white/20 p-4 rounded-2xl shadow-xl max-w-[200px]"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                      <Sprout size={20} fill="currentColor" className="opacity-20" />
+                      <Sprout size={20} className="absolute" />
+                    </div>
+                    <div>
+                      <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">Yield</div>
+                      <div className="text-lg font-bold text-slate-900">+18%</div>
+                    </div>
+                  </div>
+                  <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-green-500 h-full w-[80%]" />
+                  </div>
+                </motion.div>
+              </Parallax>
+
+              {/* Floating Glassmorphism Card 2: Research (slightly less) */}
+              <Parallax depth={0.14} className="absolute bottom-10 -left-6 md:-left-12">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1, duration: 0.6 }}
+                  className="bg-slate-900/95 backdrop-blur-md border border-slate-700 p-4 rounded-2xl shadow-2xl flex items-center gap-4 pr-6"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-900/50">
+                      <FlaskConical size={24} />
                   </div>
                   <div>
-                    <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">Yield</div>
-                    <div className="text-lg font-bold text-slate-900">+18%</div>
+                    <div className="text-white font-bold text-base">Lab Tested</div>
+                    <div className="text-emerald-400 text-xs font-medium">Certified Bio-Input</div>
                   </div>
-                </div>
-                <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-green-500 h-full w-[80%]" />
-                </div>
-              </motion.div>
+                </motion.div>
+              </Parallax>
 
-              {/* Floating Glassmorphism Card 2: Research */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-                className="absolute bottom-10 -left-6 md:-left-12 bg-slate-900/95 backdrop-blur-md border border-slate-700 p-4 rounded-2xl shadow-2xl flex items-center gap-4 pr-6"
-              >
-                <div className="w-12 h-12 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-lg shadow-emerald-900/50">
-                   <FlaskConical size={24} />
-                </div>
-                <div>
-                  <div className="text-white font-bold text-base">Lab Tested</div>
-                  <div className="text-emerald-400 text-xs font-medium">Certified Bio-Input</div>
-                </div>
-              </motion.div>
-
-            </div>
+            </Parallax>
           </motion.div>
 
         </motion.div>
