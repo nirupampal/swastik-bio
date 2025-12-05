@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Sprout, Leaf, Loader2, AlertCircle } from "lucide-react";
 import ProductCard from "./ProductCard"; 
+import ProductModal from "./ProductModal"; 
 import { useLocale } from "../i18n";
 
 const gridContainerVariants = {
@@ -15,14 +16,11 @@ const gridItemVariants = {
 };
 
 export default function ProductGrid() {
-  // 1. Get 'locale' from the hook so we can pick the right intro language
-  const { t, locale } = useLocale();
-  
+  const { t } = useLocale();
   const [products, setProducts] = useState([]);
-  const [introText, setIntroText] = useState(null); // State for dynamic intro text
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedProduct, setSelectedProduct] = useState(null); // Kept if you re-add modal logic later
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   // --- DATA FETCHING LOGIC ---
   useEffect(() => {
@@ -31,6 +29,7 @@ export default function ProductGrid() {
         setLoading(true);
         // 1. Fetch from your backend
         const response = await fetch("https://swastik.tnbpos.in/api/products");
+        console.log(response);
         
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -38,16 +37,12 @@ export default function ProductGrid() {
 
         // 2. Parse JSON
         const data = await response.json();
+        console.log(data);
         
-        // 3. Update State
-        // Handle structure: { intro: {...}, list: [...] }
-        const productList = data.list || (Array.isArray(data) ? data : []); 
+        // 3. Update State (Handle structure: { list: [...] } or just [...])
+        // Based on your JSON snippet, it looked like { list: [...] }
+        const productList = data.list || data || []; 
         setProducts(productList);
-
-        // Capture the intro object if it exists
-        if (data.intro) {
-          setIntroText(data.intro);
-        }
         
       } catch (err) {
         console.error("Error fetching products:", err);
@@ -62,6 +57,10 @@ export default function ProductGrid() {
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
   };
 
   return (
@@ -94,13 +93,8 @@ export default function ProductGrid() {
             </span>
           </h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-emerald-400 to-teal-500 mx-auto rounded-full mb-6" />
-          
-          {/* 4. Dynamic Intro Text Logic */}
           <p className="text-slate-500 text-lg">
-            {introText 
-              ? (introText[locale] || introText['en']) // Use API data if available
-              : t("products.intro", "Scientifically developed inputs for sustainable farming.") // Fallback
-            }
+            {t("products.intro", "Scientifically developed inputs for sustainable farming.")}
           </p>
         </motion.div>
 
@@ -145,6 +139,13 @@ export default function ProductGrid() {
           </motion.div>
         )}
       </div>
+
+      {/* Modal Integration */}
+      <ProductModal 
+        product={selectedProduct} 
+        isOpen={!!selectedProduct} 
+        onClose={closeModal} 
+      />
     </section>
   );
 }

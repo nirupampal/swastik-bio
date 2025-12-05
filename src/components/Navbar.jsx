@@ -6,10 +6,10 @@ import { useLocale } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const navItems = [
-  { id: "home", key: "nav.home", href: "#home" },
-  { id: "products", key: "nav.products", href: "#products" },
-  { id: "about", key: "nav.about", href: "#about" },
-  { id: "contact", key: "nav.contact", href: "#contact" }
+  { id: "home", key: "nav.home", href: "/#home" },
+  { id: "products", key: "nav.products", href: "/#products" },
+  { id: "about", key: "nav.about", href: "/#about" },
+  { id: "contact", key: "nav.contact", href: "/#contact" }
 ];
 
 export default function Navbar() {

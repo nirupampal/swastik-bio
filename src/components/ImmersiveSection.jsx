@@ -43,11 +43,11 @@ export default function ImmersiveSection() {
 
         {/* Dark Overlay - MODIFIED FOR BRIGHTNESS */}
         {/* Changed bg-black/40 to bg-black/10 to make the video much brighter */}
-        <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 bg-black/10 "></div>
       </motion.div>
 
       {/* 2. THE FLOATING CONTENT */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-4 text-center backdrop-blur-[6px] text-white">
         <motion.div style={{ y: yText, opacity: opacityText }}>
           <h2 className="text-sm font-bold tracking-[0.2em] uppercase text-emerald-300 mb-4">
             Our Philosophy
